@@ -53,3 +53,6 @@ model = YOLO('runs/detect/train/weights/best.pt')
 results = model.track(source="Ruta al vídeo", show=True)
 ```
 
+## Conclusiones
+
+Para las imágenes que hemos utilizado de prueba se observa que la detección manual ajusta mejor el contorno de la matrícula y permite que easyocr lea de forma más precisa dicha matrícula. Por otro lado, la detección realizada con el modelo "yolov8" entrenado facilita el proceso, ya que, no tenemos que estar detectando el vehículo previamente ni tenemos que estar procesando la imagen en busca de contornos.
