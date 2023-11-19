@@ -22,7 +22,7 @@ En primer lugar, tuvimos que encontrar un [conjunto de datos](https://github.com
 
 yolo detect train model=yolov8n.pt data=data/miarchivo.yml imgsz=416 batch=4 device=0[,1,2,3] epochs=40
 
-![Resultado del entrenamiento](https://github.com/ivanom2002/VC_P5/edit/main/entrenamiento.jpg)
+![Resultado del entrenamiento](https://github.com/ivanom2002/VC_P5/blob/main/entrenamiento.jpg)
 
 Una vez entrenado, cargamos el modelo de la siguiente manera:
 
