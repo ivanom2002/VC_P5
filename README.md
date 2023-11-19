@@ -20,13 +20,13 @@ Para este apartado, hemos utilizado diferentes heurísticas, por ejemplo: la mat
 
 En primer lugar, tuvimos que encontrar un [conjunto de datos](https://github.com/ivanom2002/VC_P5/edit/main/dataset) que nos permitiera realizar el entrenamiento. Una vez obtuvimos dicho conjunto de datos hicimos el entrenamiento ejecutando la siguiente línea:
 
-yolo detect train model=yolov8n.pt data=data/miarchivo.yml imgsz=416 batch=4 device=0[,1,2,3] epochs=40
+```yolo detect train model=yolov8n.pt data=data/miarchivo.yml imgsz=416 batch=4 device=0[,1,2,3] epochs=40```
 
 ![Resultado del entrenamiento](https://github.com/ivanom2002/VC_P5/blob/main/entrenamiento.jpg)
 
 Una vez entrenado, cargamos el modelo de la siguiente manera:
 
-trainedModel = YOLO('runs/detect/train/weights/best.pt')
+```trainedModel = YOLO('runs/detect/train/weights/best.pt')```
 
 Por úlitmo creamos la función dectar_matricula_yolo() que usa el modelo entrenado para hacer la detección de matrículas sobre una imagen.
 
@@ -34,6 +34,8 @@ Por úlitmo creamos la función dectar_matricula_yolo() que usa el modelo entren
 
 En este apartado utilizamos la función de tracking que ofrece yolov8 para poder hacer la detección de matrículas sobre un vídeo. Para ello utilizamos el siguiente código:
 
+```
 model = YOLO('runs/detect/train/weights/best.pt')
 results = model.track(source="Ruta al vídeo", show=True)
+```
 
