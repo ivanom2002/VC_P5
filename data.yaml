@@ -1,0 +1,12 @@
+# Dataset
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: C:/Users/ivano/Qsync/INGENIERÍA INFORMÁTICA/CUARTO/VC/VC_P5/dataset/train/
+val: C:/Users/ivano/Qsync/INGENIERÍA INFORMÁTICA/CUARTO/VC/VC_P5/dataset/val/ 
+test: C:/Users/ivano/Qsync/INGENIERÍA INFORMÁTICA/CUARTO/VC/VC_P5/dataset/test/  
+
+# number of classes
+nc: 1
+
+# class names
+names: [ 'matricula' ]
