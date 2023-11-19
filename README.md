@@ -10,6 +10,7 @@ Para este apartado, hemos utilizado diferentes heurísticas, por ejemplo: la mat
 
 1. Detectamos un vehículo haciendo uso de yolov8
 2. Pasamos la imagen del vehículo a nuestra función detectar_matricula()
+
     2.1 Nos quedamos con la mitad inferior de la imagn y la procesamos para mejorar los contrastes.
     2.2 Aplicamos umbralizado.
     2.3 Buscamos contornos externos y nos quedamos con los que nos interesan en función de sus proporciones y de si contienen texto (para la detección de caracteres hemos utilziado easyocr).
