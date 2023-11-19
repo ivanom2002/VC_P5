@@ -2,16 +2,19 @@
 
 ## Introducción 
 
-El objetivo de esta práctica es realizar la detección de matrículas ya sea desde una imagen o desde un vídeo. Para ello, se han elaborado dos enfoques diferentes. En primer lugar, tratamos de detectar la matrícula haciendo procesado de la imagen y detectando contornos. Posteriormente, se ha entrenado "yolo" para que detecte matrículas.
+El objetivo de esta práctica es realizar la detección de matrículas ya sea desde una imagen o desde un vídeo. Para ello, se han elaborado dos enfoques diferentes. 
+
+1. Tratamos de detectar la matrícula haciendo procesado de la imagen y detectando contornos. 
+2. Se ha entrenado "yolo" para que detecte matrículas.
 
 ## Detección con procesado de imagen
 
 Para este apartado, hemos utilizado diferentes heurísticas, por ejemplo: la matrícula suele estar en la mitad inferior de la imagen, su contorno tiene forma rectangular y tiene unas proporciones determinadas. Por tanto, el procedimiento seguido ha sido el siguiente:
 
-1. Detectamos un vehículo haciendo uso de yolov8
+1. Detectamos un vehículo haciendo uso de "yolov8"
 2. Pasamos la imagen del vehículo a nuestra función detectar_matricula()
 
-    2.1 Nos quedamos con la mitad inferior de la imagn y la procesamos para mejorar los contrastes.
+    2.1 Nos quedamos con la mitad inferior de la imagen y la procesamos para mejorar los contrastes.
    
     2.2 Aplicamos umbralizado.
    
