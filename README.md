@@ -46,7 +46,7 @@ Por úlitmo creamos la función dectar_matricula_yolo() que usa el modelo entren
 
 ## Tracking con yolov8
 
-En este apartado utilizamos la función de tracking que ofrece yolov8 para poder hacer la detección de matrículas sobre un vídeo. Para ello utilizamos el siguiente código:
+En este apartado utilizamos la función de tracking que ofrece "yolov8" para poder hacer la detección de matrículas sobre un vídeo. Para ello utilizamos el siguiente código:
 
 ```
 model = YOLO('runs/detect/train/weights/best.pt')
