@@ -12,24 +12,34 @@ Para este apartado, hemos utilizado diferentes heurísticas, por ejemplo: la mat
 2. Pasamos la imagen del vehículo a nuestra función detectar_matricula()
 
     2.1 Nos quedamos con la mitad inferior de la imagn y la procesamos para mejorar los contrastes.
+   
     2.2 Aplicamos umbralizado.
+   
     2.3 Buscamos contornos externos y nos quedamos con los que nos interesan en función de sus proporciones y de si contienen texto (para la detección de caracteres hemos utilziado easyocr).
+   
     2.4 Finalmente, hacemos un plot de la imagen con un rectángulo verde sobre la matrícula detectada y devolvemos el texto encontrado en la matrícula.
 
+![Resultado de la detección](https://github.com/ivanom2002/VC_P5/blob/main/resultadoManual.jpg)
 
 ## Detección usando yolov8
 
 En primer lugar, tuvimos que encontrar un [conjunto de datos](https://github.com/ivanom2002/VC_P5/edit/main/dataset) que nos permitiera realizar el entrenamiento. Una vez obtuvimos dicho conjunto de datos hicimos el entrenamiento ejecutando la siguiente línea:
 
-```yolo detect train model=yolov8n.pt data=data/miarchivo.yml imgsz=416 batch=4 device=0[,1,2,3] epochs=40```
+```
+yolo detect train model=yolov8n.pt data=data/miarchivo.yml imgsz=416 batch=4 device=0[,1,2,3] epochs=40
+```
 
 ![Resultado del entrenamiento](https://github.com/ivanom2002/VC_P5/blob/main/entrenamiento.jpg)
 
 Una vez entrenado, cargamos el modelo de la siguiente manera:
 
-```trainedModel = YOLO('runs/detect/train/weights/best.pt')```
+```
+trainedModel = YOLO('runs/detect/train/weights/best.pt')
+```
 
-Por úlitmo creamos la función dectar_matricula_yolo() que usa el modelo entrenado para hacer la detección de matrículas sobre una imagen.
+Por úlitmo creamos la función dectar_matricula_yolo() que usa el modelo entrenado para hacer la detección de matrículas sobre una imagen y "easyocr" para leer la matrícula. Obteniendo resultados como el siguiente:
+
+![Resultado de la detección](https://github.com/ivanom2002/VC_P5/blob/main/resultadoYolo.jpg)
 
 ## Tracking con yolov8
 
